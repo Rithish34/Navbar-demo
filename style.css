@@ -1,209 +1,86 @@
-:root{
-    --red:crimson;
-   --green:#53BF9D;
-   --yellow:#FFC54D;
-   --white:whitesmoke;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(../pexels-kawaiiart-1767434.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
 }
 
-body,h2{
-   margin:0;
-   font-family: Arial, Helvetica, sans-serif;
+nav {
+    background-color: darksalmon;
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: darkslateblue;
 }
 
-.landing{
-   background-image: url('../pexels-jessica-lewis-🦋-thepaintedsquare-858094.jpg');
-   background-size: cover;
-   background-position: center;
-   height:100vh;
-   color:var(--white);
+nav li {
+    display: inline-block;
+    margin: 0 8px;
 }
 
-header a{
-   text-decoration: none;
-   color:var(--yellow);
-   min-width: 120px; 
+nav a {
+    text-decoration: none;
 }
 
-header{
-   display:flex;
-   flex-wrap:wrap;
-   row-gap:1em;
-   padding:1em;
+.logo {
+    font-size: 36px;
+    font-weight: bolder;
 }
 
-#logo{
-   flex:3;
-   font-size:1.25em;
-   min-width:260px;
+nav a:hover {
+    color: whitesmoke;
 }
 
-nav{
-   flex:2;
-   display:flex;
-   align-items: center;
-}   
-
-nav a{
-   flex:1;
+.menu-line {
+    height: 3px;
+    width: 20px;
+    background-color: darkslateblue;
+    margin-bottom: 3px;
 }
 
-nav a:hover{
-   color:var(--green);
+.menu {
+    cursor: pointer;
+    display: none;
+
 }
 
-header h2 i,nav a i{
-   margin-right: .5em; 
-}
+@media all and (max-width:640px) {
+    nav {
+        flex-direction: column;
 
+    }
 
-.maintext{
-   display:flex;
-   flex-direction:column;
-   height:50vh;
-   justify-content: center;
-   padding:2em;
-}
+    nav li {
+        display: block;
+        padding: 10px 0;
+    }
 
-.tagline1{
-   color:var(--red);
-   font-size:2.5em;
-   font-weight: bolder;
-}
+    ul {
+        text-align: center;
+        padding: 0;
+        display: none;
+    }
 
-.tagline2{
-   color:var(--yellow);
-}
+    .logo {
+        align-self: flex-start;
+        margin: 10px 0px 0px 30px;
+    }
 
-.maintext div{
-   margin-top:.75em;
-}
+    .menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 12px;
+    }
 
-.maintext button{
-   width:20vw;
-   margin-top:2em;
-   border-radius:10px;
-   padding:.7em;
-   background-color: var(--yellow);
-   color:var(--white);
-   border: 1px solid var(--yellow);
-}
+    .showmenu {
+        display: block;
+    }
 
-.menu{
-   display:grid;
-   grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-   background:linear-gradient(to right,rgb(100, 100, 100),rgb(53, 52, 52));
-   color:var(--white);
-}
-
-#menuheading,#locheading{
-   background:linear-gradient(to right,rgb(100, 100, 100),rgb(53, 52, 52));
-   font-size:2.5em;
-   color:var(--red);
-   display: flex;
-   justify-content: center;
-}
-
-.menu th{
-   color:var(--green);
-   font-size: 1.8em;
-}
-
-table{
-   width:100%;
-   padding:1em;
-}
-
-.menu tr{
-   display:flex;
-   justify-content: center;
-   margin-top:.8em;
-}
-
-.menu td:nth-child(1){
-   flex:1;
-   justify-self: left;
-}
-
-
-.menu td:nth-child(2){
-   justify-self: right;
-}
-
-.maincourse{
-   grid-row:span 2;
-}
-
-.locations{
-   background:linear-gradient(to right,rgb(100, 100, 100),rgb(53, 52, 52));
-   color:var(--white);
-   display:flex;
-   flex-wrap:wrap;
-}
-
-.locations h2{
-   color:var(--green);
-   margin-bottom: .8em;
-}
-
-.locations div{
-   flex:1;
-   padding:1em;
-   min-width:220px;
-}
-
-footer{
-   background-color: rgb(55, 55, 55);
-   color:var(--white);
-   padding:.25em 1em;
-}
-
-#copyright{
-   margin-left:20px;
-}
-.social-menu ul{
-   display: flex;
-   padding:0;
-}
-
-.social-menu ul li{
-   list-style: none;
-   display:inline-block;
-   margin: 0 15px;
-}
-
-.social-menu ul li .fab{
-   font-size: 25px;
-   line-height: 40px;
-   transition: .3s;
-   color: #000;
-}
-
-.social-menu ul li .fab:hover{
-   color: #fff;
-}
-
-.social-menu ul li a{
-   position: relative;
-   display: block;
-   width: 40px;
-   height: 40px;
-   border-radius: 50%;
-   background-color: #fff;
-   text-align: center;
-   transition: .6s;
-   box-shadow: 0 5px 4px rgba(0,0,0,.5);
-}
-
-.social-menu ul li a:hover{
-   transform: translate(0, -10%);
-}
-
-.social-menu ul li:nth-child(1) a:hover{
-   background-color: #4267B2;
-}
-.social-menu ul li:nth-child(2) a:hover{
-   background-color: #E4405F;
-}
-.social-menu ul li:nth-child(3) a:hover{
-   background-color: #00ACEE;
 }
